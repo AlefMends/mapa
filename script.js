@@ -1,13 +1,11 @@
-// Inicializa o mapa em um elemento div com o ID "map"
 var map = L.map('map');
 
-// Adiciona um camada do mapa de fundo
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
   maxZoom: 18,
 }).addTo(map);
 
-// Define a visualização inicial do mapa baseado nos marcadores
+// visualização inicial do mapa baseado nos marcadores
 var bounds = L.latLngBounds([-3.7319, -38.5267], [-4.1208, -38.4709]);
 map.fitBounds(bounds);
 
@@ -22,13 +20,11 @@ var popupContent1 = '<div class="popup-content">' +
 
 marker1.bindPopup(popupContent1);
 
-// Adicione a classe "marker-neon" ao elemento do marcador quando o mouse passar por cima
 marker1.on('mouseover', function(e) {
   this.getElement().classList.add('marker-neon');
   this.openPopup();
 });
 
-// Remova a classe "marker-neon" do elemento do marcador quando o mouse sair de cima do marcador
 marker1.on('mouseout', function(e) {
   this.getElement().classList.remove('marker-neon');
   this.closePopup();
@@ -36,8 +32,6 @@ marker1.on('mouseout', function(e) {
 marker1.on('click', function(e) {
   window.open('https://concrematcorp.sharepoint.com/sites/CAGECE/SitePages/CTR048-2022.aspx', '_blank');
 });
-
-
 
 
 // marker2
@@ -157,11 +151,9 @@ horizontePolygon.on('mouseout', function (e) {
   horizontePolygon.getElement().classList.remove('white-border');
 });
 
-// Obtém o ponto central do retângulo que circunscreve o polígono
 var fortalezaBounds = fortalezaPolygon.getBounds();
 var fortalezaCenter = fortalezaBounds.getCenter();
 
-// Adiciona o nome da cidade no centro do polígono
 L.marker(fortalezaCenter, {
 icon: L.divIcon({
   className: 'city-label',
