@@ -1,0 +1,131 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+#map {
+  height: calc(100% - 1em);
+  width: 100%;
+}
+
+.white-border {
+  stroke: #ffffff;
+  stroke-width: 4px;
+  box-shadow: 0 0 20px #ff00d4;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  }
+  
+  .marker {
+    stroke: #fff;
+    stroke-width: 4;
+  }
+  
+  .marker-neon {
+    stroke: #ff00d4;
+    stroke-width: 6;
+    filter: drop-shadow(0 0 10px #ff00b3);
+    animation: neon 1s ease-in-out infinite alternate;
+  }
+  
+  
+  .popup-image {
+    display: flex;
+    align-items: center;
+  }
+  
+  .popup-image img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+  .popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .popup-content p strong {
+    font-weight: 900;
+  }
+  
+  .popup-content img {
+    width: 100%;
+    max-width: 400px; /* Define uma largura máxima para a imagem */
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .popup-highlight {
+    color: red;
+  }
+
+  .popup-text {
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .leaflet-popup-content-wrapper {
+    border: 3px solid rgb(0, 0, 0);
+    margin: 10px;
+  }
+  
+  
+  .focus-button {
+    background-color: #313fff;
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .focus-button:hover {
+    background-color: #ffffff;
+    color: #000;
+  }
+  .focus-button:hover {
+    background-color: rgb(231, 231, 231);
+  }
+  .focus-icon {
+    display: inline-block;
+    width: 17px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #ff0000;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .focus-icon::before,
+  .focus-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .focus-icon::before {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f00;
+  }
+  
+  .focus-icon::after {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  
