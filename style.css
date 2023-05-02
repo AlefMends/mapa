@@ -3,12 +3,6 @@ html, body {
   margin: 0;
 }
 
-h1 {
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
-}
-
 #map {
   height: calc(100% - 1em);
   width: 100%;
