@@ -57,7 +57,7 @@ h1 {
   
   .popup-content img {
     width: 100%;
-    max-width: 400px; /* Define uma largura máxima para a imagem */
+    max-width: 400px;
     height: auto;
     margin-bottom: 10px;
   }
