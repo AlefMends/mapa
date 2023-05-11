@@ -128,4 +128,10 @@ h1 {
     background-color: #fff;
   }
   
-  
+  .city-label{
+    display: flex;
+    justify-content: center;
+    font-size:medium
+    border: none;
+    margin: 0;
+  }
